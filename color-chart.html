@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>KD Color chart</title>
+
+<link rel="stylesheet" type="text/css" href="_asset/css/reset.css">
+<link rel="stylesheet" type="text/css" href="_asset/css/kd-color-chart.css">
+
+<script src="_asset/js/jquery-3.3.1.min.js"></script>
+<script src="_asset/js/kd-color-chart.js"></script>
+
+</head>
+
+
+
+<body>
+<div id="container">
+
+  <header>
+    <h1>KD Color chart</h1>
+  </header>
+
+  <main>
+
+    <section>
+
+      <ul>
+        <li><label><input type="radio" value="rgb" name="colorType">RGB</label></li>
+        <li><label><input type="radio" value="hex" name="colorType" checked>HEX</label></li>
+        <li class="input">COLOR CODE : <span>000000</span></li>
+      </ul>
+
+      <table>
+        <thead>
+          <tr>
+            <th class="name">Color name</th>
+            <th class="before">Before</th>
+            <th class="after">After</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th class="name"><input type="text" value="Glay"></th>
+            <th class="before"><input class="before color" type="text" value="000000"></th>
+            <th class="after"><input class="after color" type="text" value="FFFFFF"></th>
+          </tr>
+<script>
+  const colorArray = [
+    ['Exastro','002B62','FFFFFF'],
+    ['OASE','00A9AC','FFFFFF'],
+    ['Red','C80000','FFFFFF'],
+    ['Orange1','FF821E','FFFFFF'],
+    ['Orange2','FF640A','FFFFFF'],
+    ['Orange3','FFA500','FFFFFF'],
+    ['','FF0000','FFFFFF'],
+    ['','60C60D','FFFFFF'],
+    ['','FFFF00','FFFFFF'],
+    ['','8A2BE2','FFFFFF'],
+    ['','EB6E00','FFFFFF'],
+    ['','003629','FFFFFF'],
+    ['','003F4C','FFFFFF'],
+    ['','2F2346','FFFFFF'],
+    ['','76161B','FFFFFF'],
+    ['','76491B','FFFFFF'],
+    ['','384249','FFFFFF']
+  ],
+  arrayLength = colorArray.length;  
+  for ( let i = 0; i < arrayLength; i++ ) {
+    const trHTML = ''
+      + '<tr>'
+        + '<th class="name"><input type="text" value="' + colorArray[i][0] +'"></th>'
+        + '<th class="before"><input class="before color" type="text" value="' + colorArray[i][1] +'"></th>'
+        + '<th class="after"><input class="after color" type="text" value="' + colorArray[i][2] +'"></th>'
+      + '</tr>'
+    document.write( trHTML )
+  }
+</script>
+        </tbody>
+      </table>
+
+    </section>
+
+  </main>
+  
+  <footer>
+    <small></small>
+  </footer>
+
+</div>
+</body>
+</html>
