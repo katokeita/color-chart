@@ -1,0 +1,27 @@
+{
+    "option": {
+        "number": 50,
+        "type": "hex"
+    },
+    "colors": [
+        ["common","000000","FFFFFF"],
+        ["Exastro / ITA","002B62","FFFFFF"],
+        ["OASE","00A9AC","FFFFFF"],
+        ["EPOCH","1F8C78","FFFFFF"],
+        ["Orange 1","FF821E","FFFFFF"],
+        ["Orange 2","FF640A","FFFFFF"],
+        ["Orange 3","FFA500","FFFFFF"],
+        ["Red 1","C80000","FFFFFF"],
+        ["Green 1","60C60D","FFFFFF"],
+        ["Purple 1","8A2BE2","FFFFFF"],
+        ["Exastro / ITA","002B62","000000"],
+        ["OASE","00A9AC","000000"],
+        ["EPOCH","1F8C78","000000"],
+        ["Orange 1","FF821E","000000"],
+        ["Orange 2","FF640A","000000"],
+        ["Orange 3","FFA500","000000"],
+        ["Red 1","C80000","000000"],
+        ["Green 1","60C60D","000000"],
+        ["Purple 1","8A2BE2","000000"]
+    ]
+}

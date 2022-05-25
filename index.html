@@ -21,70 +21,59 @@
   </header>
 
   <main>
-
     <section>
-
       <ul>
-        <li><label><input type="radio" value="rgb" name="colorType">RGB</label></li>
-        <li><label><input type="radio" value="hex" name="colorType" checked>HEX</label></li>
-        <li class="input">COLOR CODE : <span>000000</span></li>
+        <li>
+            <dl>
+                <dt>Chart</dt>
+                <dd><button type="button" id="add">Add</button></dd>
+            </dl>
+        </li>
+        <li>
+            <dl>
+                <dt>Chart JSON</dt>
+                <dd><button type="button" id="file">Read</button></dd>
+                <dd><button type="button" id="download">Download</button></dd>
+            </dl>
+        </li>
+        <li>
+            <dl>
+                <dt>Local storage</dt>
+                <dd><button type="button" id="set">Set</button></dd>
+                <dd><button type="button" id="clear">Clear</button></dd>
+            </dl>
+        </li>
+        <li>
+            <dl>
+                <dt>Shade</dt>
+                <dd>
+                    <select id="shade">
+                        <option value="10">10</option>
+                        <option value="20">20</option>
+                        <option value="25">25</option>
+                        <option value="50">50</option>
+                        <option value="100">100</option>
+                    </select>
+                </dd>
+            </dl>
+        </li>
+        <li>
+            <dl>
+                <dt>Color</dt>
+                <dd><label><input type="radio" value="rgb" name="colorType">RGB</label></dd>
+                <dd><label><input type="radio" value="hex" name="colorType" checked>HEX</label></dd>
+            </dl>
+        </li>
+        <li>
+            <dl>
+                <dt>Target</dt>
+                <dd class="target">none</dd>
+            </dl>
+        </li>
       </ul>
-
-      <table>
-        <thead>
-          <tr>
-            <th class="name">Color name</th>
-            <th class="before">Before</th>
-            <th class="after">After</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th class="name"><input type="text" value="Glay"></th>
-            <th class="before"><input class="before color" type="text" value="000000"></th>
-            <th class="after"><input class="after color" type="text" value="FFFFFF"></th>
-          </tr>
-<script>
-  const colorArray = [
-    ['','000000','FFFFFF'],
-    ['','000000','FFFFFF'],
-    ['','000000','FFFFFF'],
-    ['','000000','FFFFFF'],
-    ['','000000','FFFFFF'],
-    ['','000000','FFFFFF'],
-    ['','000000','FFFFFF'],
-    ['','000000','FFFFFF'],
-    ['','000000','FFFFFF'],
-    ['','000000','FFFFFF'],
-    ['','000000','FFFFFF'],
-    ['','000000','FFFFFF'],
-    ['','000000','FFFFFF'],
-    ['','000000','FFFFFF'],
-    ['','000000','FFFFFF'],
-    ['','000000','FFFFFF'],
-    ['','000000','FFFFFF']
-  ],
-  arrayLength = colorArray.length;  
-  for ( let i = 0; i < arrayLength; i++ ) {
-    const trHTML = ''
-      + '<tr>'
-        + '<th class="name"><input type="text" value="' + colorArray[i][0] +'"></th>'
-        + '<th class="before"><input class="before color" type="text" value="' + colorArray[i][1] +'"></th>'
-        + '<th class="after"><input class="after color" type="text" value="' + colorArray[i][2] +'"></th>'
-      + '</tr>'
-    document.write( trHTML )
-  }
-</script>
-        </tbody>
-      </table>
-
+      <div id="colorChart"></div>
     </section>
-
   </main>
-  
-  <footer>
-    <small></small>
-  </footer>
 
 </div>
 </body>
