@@ -17,7 +17,7 @@ let value = '',
     ];
 
 // Set color chart.
-const colorChartLine = function( beforeColor, afterColor ) {
+const colorChartLine = function( beforeColor, afterColor, name ) {
 
     // Check color.
     if ( regex.test( beforeColor ) && regex.test( afterColor ) ) {
@@ -73,7 +73,7 @@ const colorChartLine = function( beforeColor, afterColor ) {
         + `<td style="background-color: #${hex}" data-rgb="${rgb}" data-hex="${hex}" data-per="${par}">`
             + `<div class="ci" style="background-color: #${hex}"></div>`
         + `</td>`);
-
+        console.log(`--${name}${par}: #${hex};`);
       }
       return colorChart.join('');
     }
@@ -83,7 +83,7 @@ const colorChartRow = function( name, beforeColor, afterColor ){
     + `<th class="move"><div class="moveBtn"></div></th>`
     + `<th class="inputTh"><input class="name" type="text" value="${name}"></th>`
     + `<th class="inputTh beforeTh"><input class="before color" type="text" value="${beforeColor}"></th>`
-    + colorChartLine( beforeColor, afterColor )
+    + colorChartLine( beforeColor, afterColorl, name )
     + `<th class="inputTh"><input class="after color" type="text" value="${afterColor}"></th>`
     + `<th class="delete"><div class="deleteBtn"></div></th>`;
 }
@@ -95,7 +95,7 @@ const updateRow = function( $row ){
         colors[index][1] = beforeColor;
         colors[index][2] = afterColor;
         $row.find('td').remove();
-        $row.find('th.beforeTh').after( colorChartLine( beforeColor, afterColor ) );
+        $row.find('th.beforeTh').after( colorChartLine( beforeColor, afterColor, $row.find('.name').val() ) );
     }
     
 };
