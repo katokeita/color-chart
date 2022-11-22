@@ -53,7 +53,8 @@ const colorChartLine = function( beforeColor, afterColor, name ) {
       };
 
       // Color chart HTML.
-      const colorChart = [];
+      const colorChart = [],
+            logColorList = [];
 
       for ( let i = 0; i <= shade; i++ ) {
         
@@ -73,8 +74,10 @@ const colorChartLine = function( beforeColor, afterColor, name ) {
         + `<td style="background-color: #${hex}" data-rgb="${rgb}" data-hex="${hex}" data-per="${par}">`
             + `<div class="ci" style="background-color: #${hex}"></div>`
         + `</td>`);
-        console.log(`--${name}${par}: #${hex};`);
+        logColorList.push(`--${name}${par}:#${hex};`);
       }
+      window.console.log( logColorList.join('') );
+      
       return colorChart.join('');
     }
 };
