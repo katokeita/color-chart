@@ -83,7 +83,7 @@ const colorChartRow = function( name, beforeColor, afterColor ){
     + `<th class="move"><div class="moveBtn"></div></th>`
     + `<th class="inputTh"><input class="name" type="text" value="${name}"></th>`
     + `<th class="inputTh beforeTh"><input class="before color" type="text" value="${beforeColor}"></th>`
-    + colorChartLine( beforeColor, afterColorl, name )
+    + colorChartLine( beforeColor, afterColor, name )
     + `<th class="inputTh"><input class="after color" type="text" value="${afterColor}"></th>`
     + `<th class="delete"><div class="deleteBtn"></div></th>`;
 }
