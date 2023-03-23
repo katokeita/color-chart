@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Color chart</title>
+
+<link rel="stylesheet" type="text/css" href="assets/css/color-chart.css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="assets/js/color-chart.js"></script>
+
+</head>
+<body>
+<div id="container">
+<!-- comment -->
+  <header>
+    <h1>Color chart</h1>
+  </header>
+
+  <main>
+    <section>
+      <ul>
+        <li>
+            <dl>
+                <dt>Chart</dt>
+                <dd><button type="button" id="add">Add</button></dd>
+            </dl>
+        </li>
+        <li>
+            <dl>
+                <dt>Chart JSON</dt>
+                <dd><button type="button" id="file">Read</button></dd>
+                <dd><button type="button" id="download">Download</button></dd>
+            </dl>
+        </li>
+        <li>
+            <dl>
+                <dt>Local storage</dt>
+                <dd><button type="button" id="set">Set</button></dd>
+                <dd><button type="button" id="clear">Clear</button></dd>
+            </dl>
+        </li>
+        <li>
+            <dl>
+                <dt>Shade</dt>
+                <dd>
+                    <select id="shade">
+                        <option value="10">10</option>
+                        <option value="20">20</option>
+                        <option value="25">25</option>
+                        <option value="50">50</option>
+                        <option value="100">100</option>
+                    </select>
+                </dd>
+            </dl>
+        </li>
+        <li>
+            <dl>
+                <dt>Color</dt>
+                <dd><label><input type="radio" value="rgb" name="colorType">RGB</label></dd>
+                <dd><label><input type="radio" value="hex" name="colorType" checked>HEX</label></dd>
+            </dl>
+        </li>
+        <li>
+            <dl>
+                <dt>Target</dt>
+                <dd class="target">none</dd>
+            </dl>
+        </li>
+      </ul>
+      <div id="colorChart"></div>
+    </section>
+  </main>
+
+</div>
+</body>
+</html>

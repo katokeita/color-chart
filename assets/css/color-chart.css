@@ -1,0 +1,255 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* reset css */
+*,*::before,*::after{box-sizing:border-box}
+a,abbr,acronym,address,applet,article,aside,audio,
+b,big,blockquote,body,canvas,caption,center,cite,code,
+dd,del,details,dfn,div,dl,dt,em,embed,fieldset,
+figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,
+header,hgroup,html,i,iframe,img,ins,kbd,label,
+legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,
+s,samp,section,small,span,strike,strong,sub,summary,sup,
+table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{
+margin:0;padding:0;border:0;font-size:100%;
+font:inherit;vertical-align:baseline}
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section{display:block}
+body{line-height:1}
+ol,ul{list-style:none}
+blockquote,q{quotes:none}
+blockquote:after,blockquote:before,
+q:after,q:before{content:'';content:none}
+table{border-collapse:collapse;border-spacing:0}
+img{max-width:100%;vertical-align: top;}
+
+html, body {
+  height: 100%;
+  margin: 0; padding: 0;
+}
+html {
+  font-size: 12px;
+}
+body {
+  line-height: 1.75;
+  font-family: "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", "sans-serif";
+}
+input, button, select, option {
+  font-family: inherit;
+  font-size: 100%;
+}
+#container {
+  overflow: hidden;
+  position: relative;
+  z-index: 0;
+  height: 100%;
+  background-color: #001127;
+  background-image:
+  linear-gradient(-90deg, #001127 50%, transparent 50%),
+  linear-gradient(#001127 50%, transparent 50%),
+  radial-gradient( #002B62, #001127 );
+  background-size: 4px 4px, 4px 4px, 100% 100%;
+}
+header {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  background-color: rgba(255,255,255,.1);
+}
+h1 {
+  padding: 0 16px;
+  line-height: 1;
+  letter-spacing: 0.25px;
+  font-size: 16px;
+  font-weight: bold;
+  color: rgba(255,255,255,.8);
+}
+main {
+  display: block;
+  height: calc( 100% - 40px );
+}
+section {
+  overflow: auto;
+  height: 100%;
+  box-shadow: 0 0 16px #000 inset;
+  
+}
+
+ul {
+  padding: 16px;
+  
+}
+li {
+  display: inline-block;
+  vertical-align: middle;
+  color: #CCC;
+}
+dl {
+display: flex;
+align-items: center;
+margin-right: 32px;
+}
+dt {
+margin-right: 8px;
+font-size: 10px;
+color: #AAA;
+}
+dt:after {
+content: ' :';
+}
+dd {
+margin-right: 4px;
+}
+li input {
+  vertical-align: top;
+}
+.input {
+  padding-left: 16px;
+  color: #AAA;
+}
+.input span {
+  color: #FFF;
+}
+table {
+  width: calc( 100% - 32px );
+  margin: 0 16px;
+  border-collapse: collapse;
+  background-color: transparent;
+}
+th,
+td {
+  border: 1px solid #333;
+  vertical-align: middle;
+  line-height: 1;
+}
+thead th {
+  padding: 8px 0;
+  
+}
+thead th.hover {
+  background-color: #600;
+}
+thead th .ci {
+  transform: scale(0.9);
+}
+thead th span {
+  opacity: .5;
+}
+tbody th {
+  width: 5em;
+}
+tbody tr:hover th {
+  background-color: #600;
+}
+th {
+  font-weight: normal;
+  font-size: 10px;
+  text-align: center;
+  color: #DDD;
+}
+td div.ci {
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  padding-bottom: 100%;
+  transition-duration: 0.3s;
+  cursor: copy;
+}
+td div.ci > div {
+  position: absolute;
+  top: 0; left: -9999px;
+  z-index: 2;
+}
+td {
+  transition-duration: 0.3s;
+}
+td.copy {
+  background-color: transparent!important;
+}
+td.copy div.ci {
+  transform: scale(0.5);
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px #FFF;
+}
+input[type="text"] {
+  width: 5em;
+  margin: 0; padding: 0;
+  background-color: transparent;
+  border: none;
+  text-align: center;
+  line-height: 1;
+  font-size: 11px;
+  color: #EEE;
+  outline: none;
+}
+#copy {
+  position: fixed;
+  left: 9999px; top: 0;
+}
+thead th,
+input[type="text"] {
+  font-family: Consolas, "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", "sans-serif";
+}
+.delete {
+vertical-align: middle;
+text-align: center;
+}
+.deleteBtn,
+.moveBtn {
+display: inline-block;
+position: relative;
+width: 10px; height: 10px;
+cursor: pointer;
+transition-duration: .2s;
+user-select: none;
+-moz-user-select: none;
+-webkit-user-select: none;
+-ms-user-select: none;
+}
+.moveBtn {
+width: 16px; height: 14px;
+background-image: linear-gradient( rgba(255,255,255,.5) 50%, rgba(255,255,255,0) 50% );
+background-size: 4px 4px;
+cursor: move;
+opacity: .5;
+}
+.deleteBtn:hover {
+transform: scale(1.2);
+}
+.moveBtn:hover {
+opacity: 1;
+}
+.deleteBtn:before,
+.deleteBtn::after {
+content: '';
+display: block;
+position: absolute;
+left: 50%; top: 50%;
+width: 10px; height: 2px;
+background-color: #CCC;
+}
+.deleteBtn:before {
+transform: translate(-50%,-50%) rotate(45deg);
+}
+.deleteBtn:after {
+transform: translate(-50%,-50%) rotate(-45deg);
+}
+tbody tr:only-child .moveBtn,
+tbody tr:only-child .deleteBtn {
+display: none;
+}
+tbody {
+position: relative;
+}
+.moveTr {
+pointer-events: none;
+position: absolute;
+z-index: 9999;
+display: table;
+width: 100%;
+background-color: #A00;
+}
+.moveTr > * {
+display: table-cell;
+vertical-align: middle;
+}
